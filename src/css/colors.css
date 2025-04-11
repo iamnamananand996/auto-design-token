@@ -1,0 +1,106 @@
+/**
+ * Auto Design Tokens - Color Utility Classes
+ */
+
+/* Background Color Utilities */
+.auto-bg-primary {
+  background-color: var(--color-backgroundPrimary);
+}
+
+.auto-bg-secondary {
+  background-color: var(--color-backgroundSecondary);
+}
+
+.auto-bg-tertiary {
+  background-color: var(--color-backgroundTertiary);
+}
+
+.auto-bg-error {
+  background-color: var(--color-backgroundError);
+}
+
+.auto-bg-success {
+  background-color: var(--color-backgroundSuccess);
+}
+
+.auto-bg-warning {
+  background-color: var(--color-backgroundWarning);
+}
+
+.auto-bg-info {
+  background-color: var(--color-backgroundInfo);
+}
+
+.auto-bg-accent {
+  background-color: var(--color-backgroundAccent);
+}
+
+/* Border Color Utilities */
+.auto-border-primary {
+  border-color: var(--color-borderPrimary);
+}
+
+.auto-border-secondary {
+  border-color: var(--color-borderSecondary);
+}
+
+.auto-border-focus {
+  border-color: var(--color-borderFocus);
+}
+
+.auto-border-error {
+  border-color: var(--color-borderError);
+}
+
+/* Button Utilities */
+.auto-button-primary {
+  background-color: var(--color-buttonPrimary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auto-button-primary:hover {
+  background-color: var(--color-buttonPrimaryHover);
+}
+
+.auto-button-secondary {
+  background-color: var(--color-buttonSecondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auto-button-secondary:hover {
+  background-color: var(--color-buttonSecondaryHover);
+}
+
+.auto-button-accent {
+  background-color: var(--color-buttonAccent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auto-button-accent:hover {
+  background-color: var(--color-buttonAccentHover);
+}
+
+.auto-button-danger {
+  background-color: var(--color-buttonDanger);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auto-button-danger:hover {
+  background-color: var(--color-buttonDangerHover);
+}
+
+.auto-button-disabled {
+  background-color: var(--color-buttonDisabled);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+

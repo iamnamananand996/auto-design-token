@@ -1,0 +1,14 @@
+/**
+ * Auto Design Tokens - Dark Theme
+ */
+
+.auto-theme-dark {
+  --color-textPrimary: #ffffff;
+  --color-textSecondary: #808080;
+  --color-backgroundPrimary: #252525;
+  --color-backgroundSecondary: #353535;
+  --color-buttonPrimary: #3654A6;
+  --color-buttonPrimaryHover: #4664B6;
+  --color-buttonAccent: #0A8DD0;
+  --color-buttonAccentHover: #109DD0;
+}

@@ -1,0 +1,66 @@
+{
+  "name": "auto-design-tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for Auto Design application",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "generate-css": "node build-tokens.js",
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "auto-design",
+    "theme"
+  ],
+  "author": "Auto Design Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@chromatic-com/storybook": "^3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-docs": "^8.6.12",
+    "@storybook/addon-controls": "^8.6.12",
+    "@storybook/addon-mdx-gfm": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-webpack5": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@tailwindcss/postcss": "^4.1.3",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "cssnano": "^7.0.6",
+    "fs-extra": "^11.3.0",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "postcss-loader": "^8.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rollup": "^3.20.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "storybook": "^8.6.12",
+    "style-dictionary": "^4.3.3",
+    "tailwindcss": "^4.1.3",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

@@ -1,0 +1,202 @@
+/**
+ * Auto Design Tokens - Typography Classes
+ */
+
+/* Heading Styles */
+.auto-heading-1 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.auto-heading-2 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.auto-heading-3 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.auto-heading-4 {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Body Text Styles */
+.auto-body-large {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.auto-body-default {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.auto-body-small {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.auto-body-x-small {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Font Size Utilities */
+.auto-text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.auto-text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.auto-text-base {
+  font-size: var(--font-size-base);
+}
+
+.auto-text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.auto-text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.auto-text-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.auto-text-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.auto-text-4xl {
+  font-size: var(--font-size-4xl);
+}
+
+.auto-text-5xl {
+  font-size: var(--font-size-5xl);
+}
+
+/* Font Weight Utilities */
+.auto-font-extralight {
+  font-weight: var(--font-weight-extralight);
+}
+
+.auto-font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.auto-font-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.auto-font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.auto-font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.auto-font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.auto-font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+/* Line Height Utilities */
+.auto-leading-none {
+  line-height: var(--line-height-none);
+}
+
+.auto-leading-tight {
+  line-height: var(--line-height-tight);
+}
+
+.auto-leading-snug {
+  line-height: var(--line-height-snug);
+}
+
+.auto-leading-normal {
+  line-height: var(--line-height-normal);
+}
+
+.auto-leading-relaxed {
+  line-height: var(--line-height-relaxed);
+}
+
+.auto-leading-loose {
+  line-height: var(--line-height-loose);
+}
+
+/* Text Color Utilities */
+.auto-text-primary {
+  color: var(--color-textPrimary);
+}
+
+.auto-text-secondary {
+  color: var(--color-textSecondary);
+}
+
+.auto-text-tertiary {
+  color: var(--color-textTertiary);
+}
+
+.auto-text-disabled {
+  color: var(--color-textDisabled);
+}
+
+.auto-text-inverse {
+  color: var(--color-textInverse);
+}
+
+.auto-text-error {
+  color: var(--color-textError);
+}
+
+.auto-text-success {
+  color: var(--color-textSuccess);
+}
+
+.auto-text-warning {
+  color: var(--color-textWarning);
+}
+
+.auto-text-info {
+  color: var(--color-textInfo);
+}
+
+.auto-text-accent {
+  color: var(--color-textAccent);
+}
+
