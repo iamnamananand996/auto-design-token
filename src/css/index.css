@@ -82,6 +82,58 @@
   --color-buttonDangerHover: #B91C1C;
   --color-buttonDisabled: #D1D5DB;
 
+  /* Explorer Colors */
+  --explorer-color-grayDark: #2A2C38;
+  --explorer-color-grayDarker: #27355D;
+  --explorer-color-grayLight: #EBEFFC;
+  --explorer-color-gradientFrom: #032372;
+  --explorer-color-gradientVia: #1949D2;
+  --explorer-color-gradientTo: #5373C4;
+  --explorer-color-gradientToSecondary: #0C1C43;
+  --explorer-color-white: #FFFFFF;
+  --explorer-color-whiteTransparent: #ffffff1a;
+  --explorer-color-whiteOpaque: #ffffffb3;
+  --explorer-color-pastelPurple: #C2B0EE;
+  --explorer-color-pastelBlue: #ABCFEF;
+  --explorer-color-pastelPink: #E6ADDC;
+  --explorer-color-pastelGreen: #91D3A0;
+  --explorer-color-greenBright: #37D058;
+  --explorer-color-primaryAccent: #1949D2;
+  --explorer-color-blueAccent: #1E254E;
+  --explorer-color-blueDarkAccent: #2A345E;
+  --explorer-color-blueLight: #EBEFFC;
+  --explorer-color-blueShade: #3654A6;
+  --explorer-color-blueUndertone: #27355D;
+  --explorer-color-backgroundLight: #EBEFFC;
+  --explorer-color-backgroundDark: #3654A6;
+  --explorer-color-backgroundDarker: #27355D;
+  --explorer-color-backgroundDarkest: #050D26;
+  --explorer-color-boxLight: #FFFFFF;
+  --explorer-color-boxDark: #2A2C38;
+  --explorer-color-buttonLightFrom: #032372;
+  --explorer-color-buttonLightTo: #5373C4;
+  --explorer-color-buttonDarkFrom: #1949D2;
+  --explorer-color-buttonDarkTo: #0C1C43;
+  --explorer-color-headerLight: #FFFFFF;
+  --explorer-color-headerDark: #2A2C38;
+  --explorer-color-footerLight: #032372;
+  --explorer-color-footerDark: #08183E;
+
+  /* Explorer Gradients */
+  --explorer-gradient-background-dark: linear-gradient(180deg, #050D26 0%, #27355D 100%);
+  --explorer-gradient-background-light: linear-gradient(180deg, #EBEFFC 0%, #3654A6 100%);
+  --explorer-gradient-button-light: linear-gradient(90deg, #032372 0%, #5373C4 100%);
+  --explorer-gradient-button-dark: linear-gradient(90deg, #1949D2 0%, #0C1C43 100%);
+  --explorer-gradient-button-hover-light: linear-gradient(90deg, #032372 0%, #5373C4 90%);
+  --explorer-gradient-button-hover-dark: linear-gradient(90deg, #1949D2 0%, #0C1C43 90%);
+  --explorer-gradient-card-primary: linear-gradient(135deg, #032372 0%, #1949D2 50%, #5373C4 100%);
+  --explorer-gradient-card-secondary: linear-gradient(135deg, #032372 0%, #1949D2 50%, #0C1C43 100%);
+  --explorer-gradient-headerOverlay-light: linear-gradient(180deg, rgba(235, 239, 252, 0.9) 0%, rgba(235, 239, 252, 0.8) 100%);
+  --explorer-gradient-headerOverlay-dark: linear-gradient(180deg, rgba(5, 13, 38, 0.9) 0%, rgba(39, 53, 93, 0.8) 100%);
+  --explorer-gradient-accent-blue: linear-gradient(90deg, #1E254E 0%, #2A345E 100%);
+  --explorer-gradient-accent-purple: linear-gradient(90deg, #C2B0EE 0%, #E6ADDC 100%);
+  --explorer-gradient-accent-green: linear-gradient(90deg, #91D3A0 30%, #ABCFEF 100%);
+
   /* Typography */
   --font-family-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-family-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -164,6 +216,36 @@
   --radius-2xl: 1rem;
   --radius-3xl: 1.5rem;
   --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-DEFAULT: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-none: none;
+  --shadow-darkSm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-darkDefault: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-darkMd: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-darkLg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-darkXl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-dark2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+
+  /* Component Shadows */
+  --shadow-button: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-dropdown: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-header: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-tooltip: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-buttonDark: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-cardDark: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-modalDark: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-dropdownDark: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-headerDark: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-tooltipDark: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -1661,6 +1743,433 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+/* Explorer Background Colors */
+.auto-explorer-bg-grayDark {
+  background-color: var(--explorer-color-grayDark);
+}
+
+.auto-explorer-bg-grayDarker {
+  background-color: var(--explorer-color-grayDarker);
+}
+
+.auto-explorer-bg-grayLight {
+  background-color: var(--explorer-color-grayLight);
+}
+
+.auto-explorer-bg-gradientFrom {
+  background-color: var(--explorer-color-gradientFrom);
+}
+
+.auto-explorer-bg-gradientVia {
+  background-color: var(--explorer-color-gradientVia);
+}
+
+.auto-explorer-bg-gradientTo {
+  background-color: var(--explorer-color-gradientTo);
+}
+
+.auto-explorer-bg-gradientToSecondary {
+  background-color: var(--explorer-color-gradientToSecondary);
+}
+
+.auto-explorer-bg-white {
+  background-color: var(--explorer-color-white);
+}
+
+.auto-explorer-bg-whiteTransparent {
+  background-color: var(--explorer-color-whiteTransparent);
+}
+
+.auto-explorer-bg-whiteOpaque {
+  background-color: var(--explorer-color-whiteOpaque);
+}
+
+.auto-explorer-bg-pastelPurple {
+  background-color: var(--explorer-color-pastelPurple);
+}
+
+.auto-explorer-bg-pastelBlue {
+  background-color: var(--explorer-color-pastelBlue);
+}
+
+.auto-explorer-bg-pastelPink {
+  background-color: var(--explorer-color-pastelPink);
+}
+
+.auto-explorer-bg-pastelGreen {
+  background-color: var(--explorer-color-pastelGreen);
+}
+
+.auto-explorer-bg-greenBright {
+  background-color: var(--explorer-color-greenBright);
+}
+
+.auto-explorer-bg-primaryAccent {
+  background-color: var(--explorer-color-primaryAccent);
+}
+
+.auto-explorer-bg-blueAccent {
+  background-color: var(--explorer-color-blueAccent);
+}
+
+.auto-explorer-bg-blueDarkAccent {
+  background-color: var(--explorer-color-blueDarkAccent);
+}
+
+.auto-explorer-bg-blueLight {
+  background-color: var(--explorer-color-blueLight);
+}
+
+.auto-explorer-bg-blueShade {
+  background-color: var(--explorer-color-blueShade);
+}
+
+.auto-explorer-bg-blueUndertone {
+  background-color: var(--explorer-color-blueUndertone);
+}
+
+.auto-explorer-bg-backgroundLight {
+  background-color: var(--explorer-color-backgroundLight);
+}
+
+.auto-explorer-bg-backgroundDark {
+  background-color: var(--explorer-color-backgroundDark);
+}
+
+.auto-explorer-bg-backgroundDarker {
+  background-color: var(--explorer-color-backgroundDarker);
+}
+
+.auto-explorer-bg-backgroundDarkest {
+  background-color: var(--explorer-color-backgroundDarkest);
+}
+
+.auto-explorer-bg-boxLight {
+  background-color: var(--explorer-color-boxLight);
+}
+
+.auto-explorer-bg-boxDark {
+  background-color: var(--explorer-color-boxDark);
+}
+
+.auto-explorer-bg-buttonLightFrom {
+  background-color: var(--explorer-color-buttonLightFrom);
+}
+
+.auto-explorer-bg-buttonLightTo {
+  background-color: var(--explorer-color-buttonLightTo);
+}
+
+.auto-explorer-bg-buttonDarkFrom {
+  background-color: var(--explorer-color-buttonDarkFrom);
+}
+
+.auto-explorer-bg-buttonDarkTo {
+  background-color: var(--explorer-color-buttonDarkTo);
+}
+
+.auto-explorer-bg-headerLight {
+  background-color: var(--explorer-color-headerLight);
+}
+
+.auto-explorer-bg-headerDark {
+  background-color: var(--explorer-color-headerDark);
+}
+
+.auto-explorer-bg-footerLight {
+  background-color: var(--explorer-color-footerLight);
+}
+
+.auto-explorer-bg-footerDark {
+  background-color: var(--explorer-color-footerDark);
+}
+
+/* Explorer Text Colors */
+.auto-explorer-text-grayDark {
+  color: var(--explorer-color-grayDark);
+}
+
+.auto-explorer-text-grayDarker {
+  color: var(--explorer-color-grayDarker);
+}
+
+.auto-explorer-text-grayLight {
+  color: var(--explorer-color-grayLight);
+}
+
+.auto-explorer-text-gradientFrom {
+  color: var(--explorer-color-gradientFrom);
+}
+
+.auto-explorer-text-gradientVia {
+  color: var(--explorer-color-gradientVia);
+}
+
+.auto-explorer-text-gradientTo {
+  color: var(--explorer-color-gradientTo);
+}
+
+.auto-explorer-text-gradientToSecondary {
+  color: var(--explorer-color-gradientToSecondary);
+}
+
+.auto-explorer-text-white {
+  color: var(--explorer-color-white);
+}
+
+.auto-explorer-text-whiteTransparent {
+  color: var(--explorer-color-whiteTransparent);
+}
+
+.auto-explorer-text-whiteOpaque {
+  color: var(--explorer-color-whiteOpaque);
+}
+
+.auto-explorer-text-pastelPurple {
+  color: var(--explorer-color-pastelPurple);
+}
+
+.auto-explorer-text-pastelBlue {
+  color: var(--explorer-color-pastelBlue);
+}
+
+.auto-explorer-text-pastelPink {
+  color: var(--explorer-color-pastelPink);
+}
+
+.auto-explorer-text-pastelGreen {
+  color: var(--explorer-color-pastelGreen);
+}
+
+.auto-explorer-text-greenBright {
+  color: var(--explorer-color-greenBright);
+}
+
+.auto-explorer-text-primaryAccent {
+  color: var(--explorer-color-primaryAccent);
+}
+
+.auto-explorer-text-blueAccent {
+  color: var(--explorer-color-blueAccent);
+}
+
+.auto-explorer-text-blueDarkAccent {
+  color: var(--explorer-color-blueDarkAccent);
+}
+
+.auto-explorer-text-blueLight {
+  color: var(--explorer-color-blueLight);
+}
+
+.auto-explorer-text-blueShade {
+  color: var(--explorer-color-blueShade);
+}
+
+.auto-explorer-text-blueUndertone {
+  color: var(--explorer-color-blueUndertone);
+}
+
+.auto-explorer-text-backgroundLight {
+  color: var(--explorer-color-backgroundLight);
+}
+
+.auto-explorer-text-backgroundDark {
+  color: var(--explorer-color-backgroundDark);
+}
+
+.auto-explorer-text-backgroundDarker {
+  color: var(--explorer-color-backgroundDarker);
+}
+
+.auto-explorer-text-backgroundDarkest {
+  color: var(--explorer-color-backgroundDarkest);
+}
+
+.auto-explorer-text-boxLight {
+  color: var(--explorer-color-boxLight);
+}
+
+.auto-explorer-text-boxDark {
+  color: var(--explorer-color-boxDark);
+}
+
+.auto-explorer-text-buttonLightFrom {
+  color: var(--explorer-color-buttonLightFrom);
+}
+
+.auto-explorer-text-buttonLightTo {
+  color: var(--explorer-color-buttonLightTo);
+}
+
+.auto-explorer-text-buttonDarkFrom {
+  color: var(--explorer-color-buttonDarkFrom);
+}
+
+.auto-explorer-text-buttonDarkTo {
+  color: var(--explorer-color-buttonDarkTo);
+}
+
+.auto-explorer-text-headerLight {
+  color: var(--explorer-color-headerLight);
+}
+
+.auto-explorer-text-headerDark {
+  color: var(--explorer-color-headerDark);
+}
+
+.auto-explorer-text-footerLight {
+  color: var(--explorer-color-footerLight);
+}
+
+.auto-explorer-text-footerDark {
+  color: var(--explorer-color-footerDark);
+}
+
+/* Explorer Gradient Utilities */
+.auto-explorer-bg-gradient-dark {
+  background: var(--explorer-gradient-background-dark);
+}
+
+.auto-explorer-bg-gradient-light {
+  background: var(--explorer-gradient-background-light);
+}
+
+.auto-explorer-button-gradient-light {
+  background: var(--explorer-gradient-button-light);
+}
+
+.auto-explorer-button-gradient-dark {
+  background: var(--explorer-gradient-button-dark);
+}
+
+.auto-explorer-button-gradient-light:hover {
+  background: var(--explorer-gradient-button-hover-light);
+}
+
+.auto-explorer-button-gradient-dark:hover {
+  background: var(--explorer-gradient-button-hover-dark);
+}
+
+.auto-explorer-card-gradient-primary {
+  background: var(--explorer-gradient-card-primary);
+}
+
+.auto-explorer-card-gradient-secondary {
+  background: var(--explorer-gradient-card-secondary);
+}
+
+
+
+/**
+ * Auto Design Tokens - Shadow Classes
+ */
+
+/* Shadow Utilities */
+.auto-shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.auto-shadow-default {
+  box-shadow: var(--shadow-default);
+}
+
+.auto-shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.auto-shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.auto-shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+.auto-shadow-2xl {
+  box-shadow: var(--shadow-2xl);
+}
+
+.auto-shadow-inner {
+  box-shadow: var(--shadow-inner);
+}
+
+.auto-shadow-none {
+  box-shadow: var(--shadow-none);
+}
+
+.auto-shadow-darksm {
+  box-shadow: var(--shadow-darksm);
+}
+
+.auto-shadow-darkdefault {
+  box-shadow: var(--shadow-darkdefault);
+}
+
+.auto-shadow-darkmd {
+  box-shadow: var(--shadow-darkmd);
+}
+
+.auto-shadow-darklg {
+  box-shadow: var(--shadow-darklg);
+}
+
+.auto-shadow-darkxl {
+  box-shadow: var(--shadow-darkxl);
+}
+
+.auto-shadow-dark2xl {
+  box-shadow: var(--shadow-dark2xl);
+}
+
+/* Component Shadow Utilities */
+.auto-shadow-button {
+  box-shadow: var(--shadow-button);
+}
+
+.auto-shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.auto-shadow-modal {
+  box-shadow: var(--shadow-modal);
+}
+
+.auto-shadow-dropdown {
+  box-shadow: var(--shadow-dropdown);
+}
+
+.auto-shadow-header {
+  box-shadow: var(--shadow-header);
+}
+
+.auto-shadow-tooltip {
+  box-shadow: var(--shadow-tooltip);
+}
+
+.auto-shadow-buttonDark {
+  box-shadow: var(--shadow-buttonDark);
+}
+
+.auto-shadow-cardDark {
+  box-shadow: var(--shadow-cardDark);
+}
+
+.auto-shadow-modalDark {
+  box-shadow: var(--shadow-modalDark);
+}
+
+.auto-shadow-dropdownDark {
+  box-shadow: var(--shadow-dropdownDark);
+}
+
+.auto-shadow-headerDark {
+  box-shadow: var(--shadow-headerDark);
+}
+
+.auto-shadow-tooltipDark {
+  box-shadow: var(--shadow-tooltipDark);
 }
 
 

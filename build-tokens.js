@@ -28,6 +28,7 @@ try {
         "./dist/tokens/typography.js"
       );
       const { default: spacing } = await import("./dist/tokens/spacing.js");
+      const { default: shadows } = await import("./dist/tokens/shadows.js");
 
       console.log("⚙️ Generating CSS files from tokens...");
 
@@ -76,6 +77,24 @@ try {
         cssContent += `\n  /* Semantic Colors (Light Theme) */\n`;
         cssContent += generateCssVariables(colors.semanticColors, "color");
 
+        // Add Explorer Colors
+        if (colors.explorerColors) {
+          cssContent += `\n  /* Explorer Colors */\n`;
+          cssContent += generateCssVariables(
+            colors.explorerColors,
+            "explorer-color"
+          );
+        }
+
+        // Add Explorer Gradients
+        if (colors.gradients) {
+          cssContent += `\n  /* Explorer Gradients */\n`;
+          cssContent += generateCssVariables(
+            colors.gradients,
+            "explorer-gradient"
+          );
+        }
+
         cssContent += `\n  /* Typography */\n`;
         cssContent += generateCssVariables(
           typography.fontFamilies,
@@ -113,6 +132,12 @@ try {
           const key = name === "DEFAULT" ? "default" : name.toLowerCase();
           cssContent += `  --radius-${key}: ${value};\n`;
         });
+
+        cssContent += `\n  /* Shadows */\n`;
+        cssContent += generateCssVariables(shadows.shadows, "shadow");
+
+        cssContent += `\n  /* Component Shadows */\n`;
+        cssContent += generateCssVariables(shadows.componentShadows, "shadow");
 
         cssContent += `}\n`;
 
@@ -330,6 +355,29 @@ try {
         return cssContent;
       }
 
+      // Generate shadows utility classes
+      function generateShadowsCSS() {
+        let cssContent = `/**
+ * Auto Design Tokens - Shadow Classes
+ */
+
+/* Shadow Utilities */
+`;
+        // Generate shadow utilities
+        Object.entries(shadows.shadows).forEach(([name, value]) => {
+          const key = name === "DEFAULT" ? "default" : name.toLowerCase();
+          cssContent += `.auto-shadow-${key} {\n  box-shadow: var(--shadow-${key});\n}\n\n`;
+        });
+
+        // Generate component shadow utilities
+        cssContent += `/* Component Shadow Utilities */\n`;
+        Object.entries(shadows.componentShadows).forEach(([name, value]) => {
+          cssContent += `.auto-shadow-${name} {\n  box-shadow: var(--shadow-${name});\n}\n\n`;
+        });
+
+        return cssContent;
+      }
+
       // Generate color utility classes
       function generateColorUtilityCSS() {
         let cssContent = `/**
@@ -369,6 +417,68 @@ try {
             }
           });
 
+        // Add Explorer colors
+        if (colors.explorerColors) {
+          cssContent += `/* Explorer Background Colors */\n`;
+          Object.entries(colors.explorerColors).forEach(
+            ([colorName, value]) => {
+              // Skip null or object values
+              if (typeof value === "string") {
+                cssContent += `.auto-explorer-bg-${colorName} {\n  background-color: var(--explorer-color-${colorName});\n}\n\n`;
+              }
+            }
+          );
+
+          cssContent += `/* Explorer Text Colors */\n`;
+          Object.entries(colors.explorerColors).forEach(
+            ([colorName, value]) => {
+              // Skip null or object values
+              if (typeof value === "string") {
+                cssContent += `.auto-explorer-text-${colorName} {\n  color: var(--explorer-color-${colorName});\n}\n\n`;
+              }
+            }
+          );
+        }
+
+        // Add Explorer Gradients
+        if (colors.gradients) {
+          cssContent += `/* Explorer Gradient Utilities */\n`;
+
+          // Process background gradients
+          if (colors.gradients.background) {
+            Object.entries(colors.gradients.background).forEach(
+              ([name, value]) => {
+                cssContent += `.auto-explorer-bg-gradient-${name} {\n  background: var(--explorer-gradient-background-${name});\n}\n\n`;
+              }
+            );
+          }
+
+          // Process button gradients
+          if (colors.gradients.button) {
+            Object.entries(colors.gradients.button).forEach(([name, value]) => {
+              if (typeof value === "string") {
+                cssContent += `.auto-explorer-button-gradient-${name} {\n  background: var(--explorer-gradient-button-${name});\n}\n\n`;
+              }
+            });
+
+            // Process button hover gradients
+            if (colors.gradients.button.hover) {
+              Object.entries(colors.gradients.button.hover).forEach(
+                ([name, value]) => {
+                  cssContent += `.auto-explorer-button-gradient-${name}:hover {\n  background: var(--explorer-gradient-button-hover-${name});\n}\n\n`;
+                }
+              );
+            }
+          }
+
+          // Process card gradients
+          if (colors.gradients.card) {
+            Object.entries(colors.gradients.card).forEach(([name, value]) => {
+              cssContent += `.auto-explorer-card-gradient-${name} {\n  background: var(--explorer-gradient-card-${name});\n}\n\n`;
+            });
+          }
+        }
+
         return cssContent;
       }
 
@@ -390,6 +500,9 @@ try {
         const colorUtilityCSS = generateColorUtilityCSS();
         writeTokenCSSFile("src/css/colors.css", colorUtilityCSS);
 
+        const shadowsCSS = generateShadowsCSS();
+        writeTokenCSSFile("src/css/shadows.css", shadowsCSS);
+
         // Generate combined CSS file
         const combinedCSS = `/**
  * Auto Design Tokens - Combined CSS
@@ -405,16 +518,18 @@ ${typographyCSS}
 ${spacingCSS}
 
 ${colorUtilityCSS}
+
+${shadowsCSS}
 `;
         writeTokenCSSFile("src/css/index.css", combinedCSS);
 
         console.log("✅ CSS generated successfully");
 
         // Copy all CSS files to dist
-        fs.copySync('./src/css', './dist/css');
+        fs.copySync("./src/css", "./dist/css");
 
         // Copy index.css to dist
-        fs.copySync('./src/css/index.css', './dist/index.css');
+        fs.copySync("./src/css/index.css", "./dist/index.css");
       }
 
       // Generate all CSS files
