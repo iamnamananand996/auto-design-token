@@ -46,7 +46,7 @@
 
 .auto-body-default {
   font-family: var(--font-family-sans);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-buttonMd);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-relaxed);
   letter-spacing: var(--letter-spacing-normal);
@@ -103,6 +103,46 @@
 
 .auto-text-5xl {
   font-size: var(--font-size-5xl);
+}
+
+.auto-text-title1 {
+  font-size: var(--font-size-title1);
+}
+
+.auto-text-title2 {
+  font-size: var(--font-size-title2);
+}
+
+.auto-text-title3 {
+  font-size: var(--font-size-title3);
+}
+
+.auto-text-bodyLg {
+  font-size: var(--font-size-bodyLg);
+}
+
+.auto-text-bodyMd {
+  font-size: var(--font-size-bodyMd);
+}
+
+.auto-text-bodySm {
+  font-size: var(--font-size-bodySm);
+}
+
+.auto-text-buttonLg {
+  font-size: var(--font-size-buttonLg);
+}
+
+.auto-text-buttonMd {
+  font-size: var(--font-size-buttonMd);
+}
+
+.auto-text-preTitle {
+  font-size: var(--font-size-preTitle);
+}
+
+.auto-text-detail {
+  font-size: var(--font-size-detail);
 }
 
 /* Font Weight Utilities */

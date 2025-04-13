@@ -80,6 +80,8 @@
   /* Typography */
   --font-family-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-family-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-display: var(--font-roboto-serif), serif;
+  --font-family-body: var(--font-libre-franklin), sans-serif;
 
   /* Font Sizes */
   --font-size-xs: 0.75rem;
@@ -91,6 +93,16 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
+  --font-size-title1: 3.313rem;
+  --font-size-title2: 2.938rem;
+  --font-size-title3: 2.5rem;
+  --font-size-bodyLg: 2rem;
+  --font-size-bodyMd: 1.688rem;
+  --font-size-bodySm: 1.313rem;
+  --font-size-buttonLg: 1.188rem;
+  --font-size-buttonMd: 1rem;
+  --font-size-preTitle: 1.188rem;
+  --font-size-detail: 1.188rem;
 
   /* Font Weights */
   --font-weight-extralight: 200;
