@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 
 // Import our CSS directly for the story
-// In a real app, you would use:
-// import "auto-design-tokens/dist/index.css";
+// In a real app, you would use one of these options:
+// import "auto-design-tokens/dist/index.css"; // All styles
+// import "auto-design-tokens/dist/css/root.css"; // Just CSS variables
+// import "auto-design-tokens/dist/css/colors.css"; // Just color utilities
+// import "auto-design-tokens/dist/css/typography.css"; // Just typography utilities
+// import "auto-design-tokens/dist/css/spacing.css"; // Just spacing utilities
+// import "auto-design-tokens/dist/css/shadows.css"; // Just shadow utilities
 import '../css/index.css';
 
 // Default export is required by Storybook

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 
 // Import our CSS directly for the story
-// In a real app, you would use:
-// import "auto-design-tokens/dist/index.css";
+// In a real app, you would use one of these options:
+// import "auto-design-tokens/dist/index.css"; // All styles
+// Or import specific utility files as needed:
+// import "auto-design-tokens/dist/css/colors.css"; 
+// import "auto-design-tokens/dist/css/typography.css";
+// import "auto-design-tokens/dist/css/spacing.css";
 import '../css/index.css';
 
 export default {
