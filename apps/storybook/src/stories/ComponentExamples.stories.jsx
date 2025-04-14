@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// Import design token styles from our monorepo package 
+// The preview.js file already imports the CSS for all stories
+
 // Import our CSS directly for the story
 // In a real app, you would use one of these options:
 // import "auto-design-tokens/dist/index.css"; // All styles
@@ -7,7 +10,7 @@ import React, { useState } from 'react';
 // import "auto-design-tokens/dist/css/colors.css"; 
 // import "auto-design-tokens/dist/css/typography.css";
 // import "auto-design-tokens/dist/css/spacing.css";
-import '../css/index.css';
+import '@autonomys/design-tokens/dist/index.css';
 
 export default {
   title: 'Examples/Components',

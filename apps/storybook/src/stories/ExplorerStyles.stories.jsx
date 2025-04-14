@@ -1,11 +1,11 @@
 import React from 'react';
 
-// Import our CSS directly for the story
-// In a real app, you would use:
-// import "auto-design-tokens/dist/css/explorer.css";
+// Import design token styles from our monorepo package
+// In a real app outside the monorepo, you would use:
+// import "@autonomys/design-tokens/dist/css/explorer.css";
 // Or for all styles:
-// import "auto-design-tokens/dist/index.css";
-import '../css/index.css';
+// import "@autonomys/design-tokens/dist/index.css";
+// The preview.js file already imports the CSS for all stories
 
 export default {
   title: 'Design Tokens/Explorer Styles',

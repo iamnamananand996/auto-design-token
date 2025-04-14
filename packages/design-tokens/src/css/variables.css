@@ -1,0 +1,244 @@
+/**
+ * Auto Design Tokens - Root CSS Variables
+ * GENERATED FILE - DO NOT EDIT DIRECTLY
+ */
+
+:root {
+  /* Color Variables */
+  --color-primary: #000000;
+  --color-primaryHover: #101010;
+  --color-accent: #0A8DD0;
+  --color-lighterAccent: #90C2E7;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-backgroundLight: #EBEFFC;
+  --color-backgroundDark: #3654A6;
+  --color-backgroundDarker: #27355D;
+  --color-backgroundDarkest: #050D26;
+  --color-lightDanger: #ffcdd2;
+  --color-grayButton: #9EA49F;
+  --color-lightGray: #4E4F54;
+  --color-whiteOpaque: #ffffffb3;
+  --color-darkWhite: #252525;
+  --color-darkWhiteHover: #353535;
+  --color-darkBlack: #ffffff;
+  --color-darkBlackHover: #808080;
+  --color-darkPrimary: #3654A6;
+  --color-darkPrimaryHover: #4664B6;
+  --color-darkAccent: #0A8DD0;
+  --color-darkAccentHover: #109DD0;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  /* Semantic Colors (Light Theme) */
+  --color-textPrimary: #000000;
+  --color-textSecondary: #4B5563;
+  --color-textTertiary: #9CA3AF;
+  --color-textDisabled: #D1D5DB;
+  --color-textInverse: #FFFFFF;
+  --color-textError: #EF4444;
+  --color-textSuccess: #10B981;
+  --color-textWarning: #F59E0B;
+  --color-textInfo: #3B82F6;
+  --color-textAccent: #0A8DD0;
+  --color-backgroundPrimary: #FFFFFF;
+  --color-backgroundSecondary: #F9FAFB;
+  --color-backgroundTertiary: #F3F4F6;
+  --color-backgroundError: #ffcdd2;
+  --color-backgroundSuccess: #ECFDF5;
+  --color-backgroundWarning: #FFFBEB;
+  --color-backgroundInfo: #EFF6FF;
+  --color-backgroundAccent: #E0F2FE;
+  --color-borderPrimary: #E5E7EB;
+  --color-borderSecondary: #D1D5DB;
+  --color-borderFocus: #0A8DD0;
+  --color-borderError: #EF4444;
+  --color-buttonPrimary: #000000;
+  --color-buttonPrimaryHover: #101010;
+  --color-buttonSecondary: #E5E7EB;
+  --color-buttonSecondaryHover: #D1D5DB;
+  --color-buttonAccent: #0A8DD0;
+  --color-buttonAccentHover: #90C2E7;
+  --color-buttonDanger: #EF4444;
+  --color-buttonDangerHover: #B91C1C;
+  --color-buttonDisabled: #D1D5DB;
+
+  /* Explorer Colors */
+  --explorer-color-grayDark: #2A2C38;
+  --explorer-color-grayDarker: #27355D;
+  --explorer-color-grayLight: #EBEFFC;
+  --explorer-color-gradientFrom: #032372;
+  --explorer-color-gradientVia: #1949D2;
+  --explorer-color-gradientTo: #5373C4;
+  --explorer-color-gradientToSecondary: #0C1C43;
+  --explorer-color-white: #FFFFFF;
+  --explorer-color-whiteTransparent: #ffffff1a;
+  --explorer-color-whiteOpaque: #ffffffb3;
+  --explorer-color-pastelPurple: #C2B0EE;
+  --explorer-color-pastelBlue: #ABCFEF;
+  --explorer-color-pastelPink: #E6ADDC;
+  --explorer-color-pastelGreen: #91D3A0;
+  --explorer-color-greenBright: #37D058;
+  --explorer-color-primaryAccent: #1949D2;
+  --explorer-color-blueAccent: #1E254E;
+  --explorer-color-blueDarkAccent: #2A345E;
+  --explorer-color-blueLight: #EBEFFC;
+  --explorer-color-blueShade: #3654A6;
+  --explorer-color-blueUndertone: #27355D;
+  --explorer-color-backgroundLight: #EBEFFC;
+  --explorer-color-backgroundDark: #3654A6;
+  --explorer-color-backgroundDarker: #27355D;
+  --explorer-color-backgroundDarkest: #050D26;
+  --explorer-color-boxLight: #FFFFFF;
+  --explorer-color-boxDark: #2A2C38;
+  --explorer-color-buttonLightFrom: #032372;
+  --explorer-color-buttonLightTo: #5373C4;
+  --explorer-color-buttonDarkFrom: #1949D2;
+  --explorer-color-buttonDarkTo: #0C1C43;
+  --explorer-color-headerLight: #FFFFFF;
+  --explorer-color-headerDark: #2A2C38;
+  --explorer-color-footerLight: #032372;
+  --explorer-color-footerDark: #08183E;
+
+  /* Explorer Gradients */
+  --explorer-gradient-background-dark: linear-gradient(180deg, #050D26 0%, #27355D 100%);
+  --explorer-gradient-background-light: linear-gradient(180deg, #EBEFFC 0%, #3654A6 100%);
+  --explorer-gradient-button-light: linear-gradient(90deg, #032372 0%, #5373C4 100%);
+  --explorer-gradient-button-dark: linear-gradient(90deg, #1949D2 0%, #0C1C43 100%);
+  --explorer-gradient-button-hover-light: linear-gradient(90deg, #032372 0%, #5373C4 90%);
+  --explorer-gradient-button-hover-dark: linear-gradient(90deg, #1949D2 0%, #0C1C43 90%);
+  --explorer-gradient-card-primary: linear-gradient(135deg, #032372 0%, #1949D2 50%, #5373C4 100%);
+  --explorer-gradient-card-secondary: linear-gradient(135deg, #032372 0%, #1949D2 50%, #0C1C43 100%);
+  --explorer-gradient-headerOverlay-light: linear-gradient(180deg, rgba(235, 239, 252, 0.9) 0%, rgba(235, 239, 252, 0.8) 100%);
+  --explorer-gradient-headerOverlay-dark: linear-gradient(180deg, rgba(5, 13, 38, 0.9) 0%, rgba(39, 53, 93, 0.8) 100%);
+  --explorer-gradient-accent-blue: linear-gradient(90deg, #1E254E 0%, #2A345E 100%);
+  --explorer-gradient-accent-purple: linear-gradient(90deg, #C2B0EE 0%, #E6ADDC 100%);
+  --explorer-gradient-accent-green: linear-gradient(90deg, #91D3A0 30%, #ABCFEF 100%);
+
+  /* Typography */
+  --font-family-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-display: var(--font-roboto-serif), serif;
+  --font-family-body: var(--font-libre-franklin), sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-title1: 3.313rem;
+  --font-size-title2: 2.938rem;
+  --font-size-title3: 2.5rem;
+  --font-size-bodyLg: 2rem;
+  --font-size-bodyMd: 1.688rem;
+  --font-size-bodySm: 1.313rem;
+  --font-size-buttonLg: 1.188rem;
+  --font-size-buttonMd: 1rem;
+  --font-size-preTitle: 1.188rem;
+  --font-size-detail: 1.188rem;
+
+  /* Font Weights */
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+  --spacing-40: 10rem;
+  --spacing-48: 12rem;
+  --spacing-56: 14rem;
+  --spacing-64: 16rem;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-default: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-DEFAULT: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-none: none;
+  --shadow-darkSm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-darkDefault: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-darkMd: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-darkLg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-darkXl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-dark2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+
+  /* Component Shadows */
+  --shadow-button: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-dropdown: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-header: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-tooltip: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-buttonDark: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-cardDark: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-modalDark: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-dropdownDark: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-headerDark: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-tooltipDark: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}

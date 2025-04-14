@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-// Import our CSS directly for the story
-// In a real app, you would use one of these options:
-// import "auto-design-tokens/dist/index.css"; // All styles
-// import "auto-design-tokens/dist/css/root.css"; // Just CSS variables
-// import "auto-design-tokens/dist/css/colors.css"; // Just color utilities
-// import "auto-design-tokens/dist/css/typography.css"; // Just typography utilities
-// import "auto-design-tokens/dist/css/spacing.css"; // Just spacing utilities
-// import "auto-design-tokens/dist/css/shadows.css"; // Just shadow utilities
-import '../css/index.css';
+// Import design token styles from our monorepo package
+// In a real app outside the monorepo, you would use one of these options:
+// import "@autonomys/design-tokens/dist/index.css"; // All styles
+// import "@autonomys/design-tokens/dist/css/root.css"; // Just CSS variables
+// import "@autonomys/design-tokens/dist/css/colors.css"; // Just color utilities
+// import "@autonomys/design-tokens/dist/css/typography.css"; // Just typography utilities
+// import "@autonomys/design-tokens/dist/css/spacing.css"; // Just spacing utilities
+// import "@autonomys/design-tokens/dist/css/shadows.css"; // Just shadow utilities
+// The preview.js file already imports the CSS for all stories
 
 // Default export is required by Storybook
 export default {
