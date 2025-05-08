@@ -13,7 +13,8 @@
     "build-storybook": "yarn workspace @autonomys/storybook build-storybook"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "prettier": "^3.2.5"
   },
   "description": "This monorepo contains packages and applications related to the Auto Design System.",
   "main": "index.js",

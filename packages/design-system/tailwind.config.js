@@ -1,19 +1,12 @@
-import { colors, spacing, typography } from '@autonomys/design-tokens';
-
 /** @type {import('tailwindcss').Config} */
 export default {
+  presets: [require('@autonomys/design-tokens/tailwind.config.js')],
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      colors: colors.colors,
-      spacing: spacing.spacing,
-      borderRadius: spacing.borderRadius,
-      fontFamily: typography.fontFamilies,
-      fontSize: typography.fontSizes,
-      fontWeight: typography.fontWeights,
-      lineHeight: typography.lineHeights,
-      letterSpacing: typography.letterSpacings,
+      // We'll use the auto- prefixed classes directly from the design tokens
+      // No additional color mapping needed
     },
   },
   plugins: [],
-}; 
+};

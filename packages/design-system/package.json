@@ -20,7 +20,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@autonomys/design-tokens": "^1.0.0"
+    "@autonomys/design-tokens": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",

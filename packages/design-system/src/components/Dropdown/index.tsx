@@ -58,27 +58,78 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   const selectedOption = options.find(option => option.value === selectedValue);
 
-  // CSS classes
-  const dropdownClasses = ['dropdown', className].filter(Boolean).join(' ');
-  
-  const triggerClasses = [
-    'dropdown-trigger',
-    `btn-${size}`,
-    disabled ? 'dropdown-trigger-disabled' : '',
+  // Size-specific styles
+  const sizeClasses = {
+    small: [
+      'auto-px-2',
+      'auto-py-1',
+      'auto-text-sm'
+    ],
+    medium: [
+      'auto-px-3',
+      'auto-py-2',
+      'auto-text-base'
+    ],
+    large: [
+      'auto-px-4',
+      'auto-py-3',
+      'auto-text-lg'
+    ]
+  };
+
+  // Class names
+  const containerClasses = [
+    'relative',
+    'w-full',
+    className
   ].filter(Boolean).join(' ');
-  
+
+  const triggerClasses = [
+    'flex',
+    'justify-between',
+    'items-center',
+    'w-full',
+    'auto-rounded-md',
+    'border',
+    'auto-border-gray-300',
+    'bg-white',
+    ...sizeClasses[size],
+    disabled ? 'bg-gray-100 cursor-not-allowed opacity-60' : 'hover:auto-border-accent',
+    'focus:outline-none focus:ring-2',
+    'auto-ring-accent',
+    'focus:ring-opacity-50',
+    'transition-colors'
+  ].filter(Boolean).join(' ');
+
   const menuClasses = [
-    'dropdown-menu',
-    `btn-${size}`,
+    'absolute',
+    'z-10',
+    'auto-mt-1',
+    'w-full',
+    'bg-white',
+    'border',
+    'auto-border-gray-200',
+    'auto-rounded-md',
+    'auto-shadow-dropdown',
+    'max-h-60',
+    'overflow-auto',
+    ...sizeClasses[size]
   ].filter(Boolean).join(' ');
 
   const getItemClasses = (option: DropdownOption) => [
-    'dropdown-item',
-    option.value === selectedValue ? 'dropdown-item-selected' : 'dropdown-item-hover',
-  ].join(' ');
+    'block',
+    'w-full',
+    'text-left',
+    'auto-px-3',
+    'auto-py-2',
+    option.value === selectedValue 
+      ? 'auto-bg-gray-100 auto-text-primary' 
+      : 'hover:auto-bg-gray-50',
+    'cursor-pointer'
+  ].filter(Boolean).join(' ');
 
   return (
-    <div className={dropdownClasses} ref={dropdownRef}>
+    <div className={containerClasses} ref={dropdownRef}>
       <button
         type="button"
         className={triggerClasses}
@@ -87,11 +138,11 @@ const Dropdown: React.FC<DropdownProps> = ({
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
-        <span className={!selectedOption ? 'text-gray-400' : ''}>
+        <span className={!selectedOption ? 'auto-text-gray-400' : ''}>
           {selectedOption ? selectedOption.label : placeholder}
         </span>
         <svg
-          className={`h-5 w-5 text-gray-400 ${isOpen ? 'transform rotate-180' : ''}`}
+          className={`h-5 w-5 auto-text-gray-400 ${isOpen ? 'transform rotate-180' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"

@@ -21,13 +21,71 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   ...rest
 }) => {
+  // Base styles
+  const baseClasses = [
+    'inline-flex',
+    'items-center',
+    'justify-center',
+    'auto-font-medium',
+    'auto-rounded-md',
+    'transition-colors',
+    'duration-200',
+    fullWidth ? 'w-full' : '',
+    disabled || isLoading ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
+  ];
+
+  // Variant-specific styles
+  const variantClasses = {
+    primary: [
+      'auto-explorer-bg-grayDark',
+      'auto-text-inverse',
+      'hover:auto-explorer-bg-grayDarker',
+      'active:auto-explorer-bg-grayDarker'
+    ],
+    secondary: [
+      'auto-explorer-bg-grayLight',
+      'auto-text-gray-800',
+      'hover:auto-explorer-bg-grayLight',
+      'active:auto-explorer-bg-grayLight'
+    ],
+    tertiary: [
+      'bg-transparent',
+      'auto-text-primary',
+      'hover:auto-explorer-bg-grayLight',
+      'active:auto-explorer-bg-grayLight'
+    ],
+    danger: [
+      'auto-bg-error',
+      'auto-text-inverse',
+      'hover:auto-button-danger',
+      'active:auto-button-dangerHover'
+    ]
+  };
+
+  // Size-specific styles
+  const sizeClasses = {
+    small: [
+      'auto-px-2',
+      'auto-py-1',
+      'auto-text-sm'
+    ],
+    medium: [
+      'auto-px-3',
+      'auto-py-2',
+      'auto-text-base'
+    ],
+    large: [
+      'auto-px-4',
+      'auto-py-3',
+      'auto-text-lg'
+    ]
+  };
+
   const buttonClasses = [
-    'btn',
-    `btn-${variant}`,
-    `btn-${size}`,
-    fullWidth ? 'btn-full' : '',
-    (disabled || isLoading) ? 'btn-disabled' : '',
-    className,
+    ...baseClasses,
+    ...variantClasses[variant],
+    ...sizeClasses[size],
+    className
   ].filter(Boolean).join(' ');
 
   return (
