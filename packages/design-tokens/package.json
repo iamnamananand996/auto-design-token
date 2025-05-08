@@ -1,7 +1,7 @@
 {
   "name": "@autonomys/design-tokens",
   "version": "1.0.0",
-  "description": "Auto Design Tokens Library",
+  "description": "Auto Design Tokens",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -13,9 +13,7 @@
     "build": "node build-tokens.js && rollup -c",
     "prebuild": "rimraf dist",
     "dev": "npm run build -- --watch",
-    "tsc": "tsc",
-    "lint": "eslint src --ext .ts,.tsx",
-    "prepublishOnly": "npm run build"
+    "tsc": "tsc"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
@@ -27,10 +25,8 @@
     "@rollup/plugin-typescript": "^11.1.5",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
-    "eslint": "^8.55.0",
     "fs-extra": "^11.1.1",
     "postcss": "^8.4.31",
-    "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.1.4",

@@ -23,27 +23,25 @@ yarn add @autonomys/design-tokens
 ### Import All Styles
 
 ```js
-// Import all styles
+// Import all styles (variables + utility classes)
 import '@autonomys/design-tokens/dist/index.css';
 ```
 
 ### Import Specific Style Categories
 
 ```js
-// Import only what you need
-import '@autonomys/design-tokens/dist/css/root.css'; // CSS variables
-import '@autonomys/design-tokens/dist/css/colors.css'; // Color utilities
-import '@autonomys/design-tokens/dist/css/typography.css'; // Typography utilities
-import '@autonomys/design-tokens/dist/css/spacing.css'; // Spacing utilities
-import '@autonomys/design-tokens/dist/css/shadows.css'; // Shadow utilities
-import '@autonomys/design-tokens/dist/css/explorer.css'; // Explorer-specific styles
+// Import only CSS variables without utility classes
+import '@autonomys/design-tokens/dist/css/variables.css';
+
+// Import only utility classes without variables
+import '@autonomys/design-tokens/dist/css/utilities.css';
 ```
 
 ## Tailwind CSS Integration
 
 You can use these design tokens with Tailwind CSS by:
 
-1. Importing the design tokens CSS file
+1. Importing just the variables CSS file
 2. Extending your Tailwind config with the tokens
 
 ```js
@@ -75,7 +73,10 @@ npm run build
 
 This will:
 1. Compile TypeScript tokens to JavaScript
-2. Generate CSS variables and utility classes
+2. Generate CSS files:
+   - `index.css`: Complete bundle with all variables and utility classes
+   - `css/variables.css`: Only CSS custom properties
+   - `css/utilities.css`: Only utility classes
 3. Output everything to the `dist` folder
 
 ## Available Classes

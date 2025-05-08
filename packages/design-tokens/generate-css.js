@@ -485,28 +485,21 @@ function generateCSS() {
       const shadowsCSS = generateShadowsCSS();
       const colorUtilitiesCSS = generateColorUtilityCSS();
 
-      // Write individual token CSS files directly to dist
+      // Create a variables-only CSS file (just CSS custom properties)
       writeTokenCSSFile("./dist/css/variables.css", rootCSS);
-      writeTokenCSSFile("./dist/css/root.css", rootCSS); // Duplicate for backward compatibility
-      writeTokenCSSFile("./dist/css/dark-theme.css", darkThemeCSS);
-      writeTokenCSSFile("./dist/css/typography.css", typographyCSS);
-      writeTokenCSSFile("./dist/css/spacing.css", spacingCSS);
-      writeTokenCSSFile("./dist/css/shadows.css", shadowsCSS);
-      writeTokenCSSFile("./dist/css/color-utilities.css", colorUtilitiesCSS);
-      writeTokenCSSFile("./dist/css/colors.css", colorUtilitiesCSS); // Duplicate for backward compatibility
-
-      // Combine all CSS into a single file
-      const allCSS = 
-        rootCSS + "\n" + 
+      
+      // Create a utilities-only CSS file (all utility classes)
+      const utilitiesCSS = 
         darkThemeCSS + "\n" + 
         typographyCSS + "\n" + 
         spacingCSS + "\n" + 
         shadowsCSS + "\n" + 
         colorUtilitiesCSS;
+      writeTokenCSSFile("./dist/css/utilities.css", utilitiesCSS);
 
-      writeTokenCSSFile("./dist/css/all-tokens.css", allCSS);
-      writeTokenCSSFile("./dist/css/index.css", allCSS); // Duplicate for import convenience
-      writeTokenCSSFile("./dist/index.css", allCSS); // Root level for direct import
+      // Combine all CSS into a single file for convenience
+      const allCSS = rootCSS + "\n" + utilitiesCSS;
+      writeTokenCSSFile("./dist/index.css", allCSS);
     }
 
     generateAllCSS();
