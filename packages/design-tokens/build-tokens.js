@@ -5,9 +5,16 @@
  * Script to compile TypeScript tokens to JavaScript
  */
 
-const fs = require('fs-extra');
-const { execSync } = require('child_process');
-const path = require('path');
+import fs from 'fs-extra';
+import { execSync } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { createRequire } from 'module';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
 console.log("⚙️ Compiling tokens...");
 
@@ -27,8 +34,8 @@ try {
   
   // Now run the CSS generation script
   try {
-    // Use require to evaluate the generate-css.js file
-    require('./generate-css');
+    // Import the CSS generation module
+    await import('./generate-css.js');
   } catch (cssError) {
     console.error("❌ Error generating CSS:", cssError);
     process.exit(1);

@@ -3,21 +3,34 @@
  * Script to generate CSS files from compiled tokens
  */
 
-const fs = require('fs-extra');
-const path = require('path');
+import fs from 'fs-extra';
+import path from 'path';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 // Ensure CSS directory exists
 fs.ensureDirSync("./dist/css");
 
 console.log("⚙️ Generating CSS files from tokens...");
 
-// Simple utility to create CSS files with content
+/**
+ * Writes a CSS file with the given content and logs its creation
+ * @param {string} filename - Path to the CSS file to create
+ * @param {string} content - CSS content to write
+ */
 function writeTokenCSSFile(filename, content) {
   fs.writeFileSync(filename, content);
   console.log(`Created ${filename}`);
 }
 
-// Generate CSS variables from any token object
+/**
+ * Recursively generates CSS variables from a token object
+ * @param {Object} tokenObj - The token object to process
+ * @param {string} prefix - Prefix for the CSS variable (e.g., "color")
+ * @param {string} parentKey - Parent key for nested objects
+ * @returns {string} Generated CSS variables
+ */
 function generateCssVariables(tokenObj, prefix = "", parentKey = "") {
   let cssContent = "";
 
@@ -42,7 +55,9 @@ function generateCssVariables(tokenObj, prefix = "", parentKey = "") {
   return cssContent;
 }
 
-// Main function to generate CSS
+/**
+ * Main function to generate CSS files from design tokens
+ */
 function generateCSS() {
   try {
     // Import the compiled token files
@@ -51,7 +66,10 @@ function generateCSS() {
     const spacing = require('./dist/tokens/spacing.js');
     const shadows = require('./dist/tokens/shadows.js');
 
-    // Generate root CSS variables
+    /**
+     * Generates CSS variables for the :root selector
+     * @returns {string} CSS content with all variables
+     */
     function generateRootCSS() {
       let cssContent = `/**
  * Auto Design Tokens - Root CSS Variables
@@ -134,7 +152,10 @@ function generateCSS() {
       return cssContent;
     }
 
-    // Generate dark theme CSS
+    /**
+     * Generates dark theme overrides
+     * @returns {string} CSS content with dark theme variables
+     */
     function generateDarkThemeCSS() {
       let cssContent = `/**
  * Auto Design Tokens - Dark Theme
@@ -148,7 +169,10 @@ function generateCSS() {
       return cssContent;
     }
 
-    // Generate typography utility classes
+    /**
+     * Generates typography utility classes
+     * @returns {string} CSS content with typography classes
+     */
     function generateTypographyCSS() {
       let cssContent = `/**
  * Auto Design Tokens - Typography Classes
@@ -295,7 +319,10 @@ function generateCSS() {
       return cssContent;
     }
 
-    // Generate spacing utility classes
+    /**
+     * Generates spacing utility classes
+     * @returns {string} CSS content with spacing classes
+     */
     function generateSpacingCSS() {
       let cssContent = `/**
  * Auto Design Tokens - Spacing Classes
@@ -349,7 +376,10 @@ function generateCSS() {
       return cssContent;
     }
 
-    // Generate shadows utility classes
+    /**
+     * Generates shadow utility classes
+     * @returns {string} CSS content with shadow classes
+     */
     function generateShadowsCSS() {
       let cssContent = `/**
  * Auto Design Tokens - Shadow Classes
@@ -372,7 +402,10 @@ function generateCSS() {
       return cssContent;
     }
 
-    // Generate color utility classes
+    /**
+     * Generates color utility classes
+     * @returns {string} CSS content with color classes
+     */
     function generateColorUtilityCSS() {
       let cssContent = `/**
  * Auto Design Tokens - Color Utility Classes
@@ -476,7 +509,9 @@ function generateCSS() {
       return cssContent;
     }
 
-    // Generate all CSS files
+    /**
+     * Generates all CSS files from tokens
+     */
     function generateAllCSS() {
       const rootCSS = generateRootCSS();
       const darkThemeCSS = generateDarkThemeCSS();
@@ -502,6 +537,7 @@ function generateCSS() {
       writeTokenCSSFile("./dist/index.css", allCSS);
     }
 
+    // Generate all CSS files
     generateAllCSS();
   } catch (error) {
     console.error("Error generating CSS:", error);
