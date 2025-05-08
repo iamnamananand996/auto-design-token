@@ -7,7 +7,6 @@ const fs = require('fs-extra');
 const path = require('path');
 
 // Ensure CSS directory exists
-fs.ensureDirSync("./src/css");
 fs.ensureDirSync("./dist/css");
 
 console.log("⚙️ Generating CSS files from tokens...");
@@ -486,40 +485,36 @@ function generateCSS() {
       const shadowsCSS = generateShadowsCSS();
       const colorUtilitiesCSS = generateColorUtilityCSS();
 
-      // Write individual token CSS files
-      writeTokenCSSFile("./src/css/variables.css", rootCSS);
-      writeTokenCSSFile("./src/css/dark-theme.css", darkThemeCSS);
-      writeTokenCSSFile("./src/css/typography.css", typographyCSS);
-      writeTokenCSSFile("./src/css/spacing.css", spacingCSS);
-      writeTokenCSSFile("./src/css/shadows.css", shadowsCSS);
-      writeTokenCSSFile("./src/css/color-utilities.css", colorUtilitiesCSS);
+      // Write individual token CSS files directly to dist
+      writeTokenCSSFile("./dist/css/variables.css", rootCSS);
+      writeTokenCSSFile("./dist/css/root.css", rootCSS); // Duplicate for backward compatibility
+      writeTokenCSSFile("./dist/css/dark-theme.css", darkThemeCSS);
+      writeTokenCSSFile("./dist/css/typography.css", typographyCSS);
+      writeTokenCSSFile("./dist/css/spacing.css", spacingCSS);
+      writeTokenCSSFile("./dist/css/shadows.css", shadowsCSS);
+      writeTokenCSSFile("./dist/css/color-utilities.css", colorUtilitiesCSS);
+      writeTokenCSSFile("./dist/css/colors.css", colorUtilitiesCSS); // Duplicate for backward compatibility
 
       // Combine all CSS into a single file
       const allCSS = 
         rootCSS + "\n" + 
         darkThemeCSS + "\n" + 
-        typographyCSS + "\n" +
-        spacingCSS + "\n" +
-        shadowsCSS + "\n" +
+        typographyCSS + "\n" + 
+        spacingCSS + "\n" + 
+        shadowsCSS + "\n" + 
         colorUtilitiesCSS;
 
-      writeTokenCSSFile("./src/css/all-tokens.css", allCSS);
-      
-      // Copy all CSS files to dist
-      fs.ensureDirSync("./dist/css");
-      fs.copySync("./src/css", "./dist/css");
-      fs.copySync("./src/css/all-tokens.css", "./dist/index.css");
+      writeTokenCSSFile("./dist/css/all-tokens.css", allCSS);
+      writeTokenCSSFile("./dist/css/index.css", allCSS); // Duplicate for import convenience
+      writeTokenCSSFile("./dist/index.css", allCSS); // Root level for direct import
     }
 
-    // Execute the CSS generation process
     generateAllCSS();
-    console.log("✅ CSS generated successfully");
   } catch (error) {
-    console.error("❌ Error generating CSS:", error);
-    console.error(error.stack);
+    console.error("Error generating CSS:", error);
     process.exit(1);
   }
 }
 
-// Run the generate CSS function
+// Execute the CSS generation
 generateCSS(); 

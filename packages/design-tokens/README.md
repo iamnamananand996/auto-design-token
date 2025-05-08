@@ -39,6 +39,45 @@ import '@autonomys/design-tokens/dist/css/shadows.css'; // Shadow utilities
 import '@autonomys/design-tokens/dist/css/explorer.css'; // Explorer-specific styles
 ```
 
+## Tailwind CSS Integration
+
+You can use these design tokens with Tailwind CSS by:
+
+1. Importing the design tokens CSS file
+2. Extending your Tailwind config with the tokens
+
+```js
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        // You can reference CSS variables
+        primary: 'var(--color-primary)',
+        accent: 'var(--color-accent)',
+      },
+      // Add more custom styling here
+    },
+  },
+  plugins: [require('@tailwindcss/forms')],
+}
+```
+
+## Building the Tokens
+
+To build the design tokens:
+
+```bash
+npm run build
+```
+
+This will:
+1. Compile TypeScript tokens to JavaScript
+2. Generate CSS variables and utility classes
+3. Output everything to the `dist` folder
+
 ## Available Classes
 
 ### Color Classes

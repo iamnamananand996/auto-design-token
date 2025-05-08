@@ -8,13 +8,15 @@
 import colors from './tokens/colors';
 import typography from './tokens/typography';
 import spacing from './tokens/spacing';
+import shadows from './tokens/shadows';
 
 // Export individual token groups
-export { colors, typography, spacing };
+export { colors, typography, spacing, shadows };
 
 // Export all tokens as a single object
 export default {
   colors,
   typography,
   spacing,
+  shadows,
 }; 

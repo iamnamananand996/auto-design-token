@@ -13,7 +13,10 @@ console.log("⚙️ Compiling tokens...");
 
 // First, ensure token output directories exist
 fs.ensureDirSync("./dist/tokens");
-fs.ensureDirSync("./src/css");
+fs.ensureDirSync("./dist/css");
+
+// Clean up any existing CSS files in dist
+fs.removeSync("./dist/css");
 fs.ensureDirSync("./dist/css");
 
 // Compile TypeScript tokens to JavaScript
