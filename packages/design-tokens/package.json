@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "node build-tokens.js && rollup -c",
-    "prebuild": "rimraf dist",
+    "prebuild": "rm -rf dist",
     "dev": "npm run build -- --watch",
     "tsc": "tsc"
   },
@@ -29,7 +29,6 @@
     "fs-extra": "^11.1.1",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
-    "rimraf": "^5.0.5",
     "rollup": "^4.1.4",
     "typescript": "^5.3.3"
   },

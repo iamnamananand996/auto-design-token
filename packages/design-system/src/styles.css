@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles that use Tailwind's @apply directive */
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primaryHover active:bg-primaryHover;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-800 hover:bg-gray-200 active:bg-gray-300;
+  }
+
+  .btn-tertiary {
+    @apply bg-transparent text-primary hover:bg-gray-100 active:bg-gray-200;
+  }
+
+  .btn-danger {
+    @apply bg-error text-white;
+  }
+
+  .btn-small {
+    @apply px-2 py-1 text-sm;
+  }
+
+  .btn-medium {
+    @apply px-3 py-2 text-base;
+  }
+
+  .btn-large {
+    @apply px-4 py-3 text-lg;
+  }
+
+  .btn-full {
+    @apply w-full;
+  }
+
+  .btn-disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  /* Dropdown styles */
+  .dropdown {
+    @apply relative w-full;
+  }
+
+  .dropdown-trigger {
+    @apply flex justify-between items-center w-full rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 transition-colors;
+  }
+
+  .dropdown-trigger-disabled {
+    @apply bg-gray-100 cursor-not-allowed opacity-60;
+  }
+
+  .dropdown-menu {
+    @apply absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto;
+  }
+
+  .dropdown-item {
+    @apply block w-full text-left px-3 py-2 cursor-pointer;
+  }
+
+  .dropdown-item-selected {
+    @apply bg-gray-100 text-primary;
+  }
+
+  .dropdown-item-hover {
+    @apply hover:bg-gray-50;
+  }
+} 

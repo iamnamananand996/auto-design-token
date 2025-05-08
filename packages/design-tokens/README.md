@@ -41,8 +41,16 @@ import '@autonomys/design-tokens/dist/css/utilities.css';
 
 You can use these design tokens with Tailwind CSS by:
 
-1. Importing just the variables CSS file
+1. Importing the variables CSS file 
 2. Extending your Tailwind config with the tokens
+
+### Step 1: Import the CSS variables
+```js
+// In your main CSS file
+@import '@autonomys/design-tokens/dist/css/variables.css';
+```
+
+### Step 2: Configure Tailwind to use the design tokens
 
 ```js
 // tailwind.config.js
@@ -52,11 +60,56 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // You can reference CSS variables
+        // Map Tailwind color names to our design token CSS variables
         primary: 'var(--color-primary)',
-        accent: 'var(--color-accent)',
+        secondary: 'var(--color-accent)',
+        danger: 'var(--color-error)',
+        success: 'var(--color-success)',
+        warning: 'var(--color-warning)',
+        info: 'var(--color-info)',
+        
+        // Map semantic colors
+        'text-primary': 'var(--color-textPrimary)',
+        'text-secondary': 'var(--color-textSecondary)',
+        'bg-primary': 'var(--color-backgroundPrimary)',
+        'bg-secondary': 'var(--color-backgroundSecondary)',
       },
-      // Add more custom styling here
+      fontSize: {
+        // Map font sizes to our design tokens
+        'xs': 'var(--font-size-xs)',
+        'sm': 'var(--font-size-sm)',
+        'base': 'var(--font-size-base)',
+        'lg': 'var(--font-size-lg)',
+        'xl': 'var(--font-size-xl)',
+        '2xl': 'var(--font-size-2xl)',
+        '3xl': 'var(--font-size-3xl)',
+      },
+      fontWeight: {
+        // Map font weights to our design tokens
+        'light': 'var(--font-weight-light)',
+        'normal': 'var(--font-weight-normal)',
+        'medium': 'var(--font-weight-medium)',
+        'semibold': 'var(--font-weight-semibold)',
+        'bold': 'var(--font-weight-bold)',
+      },
+      borderRadius: {
+        // Map border radius to our design tokens
+        'DEFAULT': 'var(--radius-default)',
+        'sm': 'var(--radius-sm)',
+        'md': 'var(--radius-md)',
+        'lg': 'var(--radius-lg)',
+      },
+      boxShadow: {
+        // Map shadows to our design tokens
+        'sm': 'var(--shadow-sm)',
+        'DEFAULT': 'var(--shadow-default)',
+        'md': 'var(--shadow-md)',
+        'lg': 'var(--shadow-lg)',
+      },
+      spacing: {
+        // You could also map spacing if needed
+        // ...
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
@@ -119,4 +172,4 @@ Apply dark theme by adding the `auto-theme-dark` class to a container:
 <div class="auto-theme-dark">
   <!-- Content will use dark theme styles -->
 </div>
-``` 
+```
