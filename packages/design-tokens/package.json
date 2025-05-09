@@ -11,10 +11,10 @@
     "README.md"
   ],
   "scripts": {
-    "build": "node build-tokens.js && rollup -c",
+    "build-css": "node build-tokens.js && rollup -c",
     "prebuild": "rm -rf dist",
     "dev": "npm run build -- --watch",
-    "tsc": "tsc"
+    "build": "tsc"
   },
   "dependencies": {
     "@instill-ai/design-tokens": "^0.10.0",
